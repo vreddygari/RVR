@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:request-config>
 	<flow name="jenkin-wtzFlow" doc:id="c361f9d4-601b-415c-a724-c7798835dbdc" >
 		<http:listener doc:name="Listener" doc:id="1d01ceed-cb36-4fac-a1f2-e8d37ff01d4e" config-ref="HTTP_Listener_config" path="timezone/{region}/{city}"/>
-		<logger level="INFO" doc:name="Logger" doc:id="31fa9583-168d-4300-94c0-92cd3fe86c35" message="Req REC"/>
+		<logger level="INFO" doc:name="Logger" doc:id="31fa9583-168d-4300-94c0-92cd3fe86c35" message="Req received"/>
 		<http:request method="GET" doc:name="Request" doc:id="cb52431b-ef21-4444-9f8c-45060dd6f508" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
 			<http:uri-params ><![CDATA[#[output application/java
 ---
